@@ -1,19 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="#C75D7F"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardIdent"
+        android:layout_width="match_parent"
+        android:backgroundTint="#E4B2BD"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="100dp"
+        android:layout_height="600dp">
+        <EditText
+            android:id="@+id/Usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Usuário"
+            android:inputType="textEmailAddress"
+            android:layout_gravity="center"
+            android:minHeight="50dp"
+            android:layout_marginBottom="16dp"
+            app:endIconMode="clear_text"
+            android:maxLength="50"
+            app:startIconDrawable="@drawable/baseline_email"/>
+      </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu e-mail"
+        android:inputType="textEmailAddress"
+        android:layout_gravity="center"
+        android:minHeight="50dp"
+        android:layout_marginBottom="16dp"
+        app:endIconMode="clear_text"
+        android:maxLength="50"
+        app:startIconDrawable="@drawable/baseline_email"/>
+</com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua senha"
+        app:boxStrokeColor="@color/black"
+        app:endIconMode="password_toggle"
+        android:layout_marginBottom="5dp"
+        app:startIconDrawable="@drawable/baseline_lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="15" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Esqueceu a senha?"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#CC4873"
+        android:text="Acessar" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#CC4873"
+        android:text="Retornar" />
+
+
+</LinearLayout>
