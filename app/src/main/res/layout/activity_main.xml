@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Digite seu e-mail"
                     android:inputType="textEmailAddress"
-                    android:maxLength="50" />
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
 
